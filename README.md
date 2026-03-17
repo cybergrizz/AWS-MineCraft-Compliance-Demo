@@ -11,7 +11,7 @@
 
 ## Overview
 
-This project provisions a Minecraft game server on AWS and uses it as a live compliance target. The infrastructure is intentionally built to pass the same security checks run by the [aws-security-audit-scripts](https://github.com/cybergrizz) scanner — no open SSH, SSM-only access, locked-down security groups, and consistent resource tagging throughout.
+This project provisions a Minecraft game server on AWS and uses it as a live compliance target. The infrastructure is intentionally built to pass the same security checks run by the [aws-security-audit-scripts](https://github.com/cybergrizz/AWS-Scanner_Proj) scanner — no open SSH, SSM-only access, locked-down security groups, and consistent resource tagging throughout.
 
 The end state ties scanner findings to NIST AI RMF control categories (Govern / Map / Measure / Manage) stored in DynamoDB, making this a working GRC demo rather than a static architecture diagram.
 
