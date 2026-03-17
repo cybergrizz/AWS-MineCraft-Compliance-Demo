@@ -1,7 +1,18 @@
 variable "azones" {
   type        = string
   default     = "us-east-1a"
-  description = "Availiabilty Zones"
+  description = "Availabilty Zones"
+}
+
+variable "vpc_id" {
+  type        = string
+  default     = "aws_vpc.main.id"
+  description = "Name for the Minecraft server security group"
+}
+
+variable "ami_id" {
+  type    = string
+  default = "data.aws_ami.amazon_linux_2.id"
 }
 
 variable "mc_port" {
@@ -65,18 +76,14 @@ variable "tcp" {
   description = "TCP port for sg access"
 }
 
-variable "public_subnets" {
-  default = {
-    "public-subnet-1" = 1
-    "public-subnet-2" = 2
-  }
+variable "public_subnet" {
+  type    = string
+  default = "aws_subnet.public.id"
 }
 
-variable "private_subnets" {
-  default = {
-    "private-subnet-1" = 1
-    "private-subnet-2" = 2
-  }
+variable "private_subnet" {
+  type    = string
+  default = "aws_subnet.private.id"
 }
 
 variable "instance_type" {
