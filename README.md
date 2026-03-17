@@ -44,6 +44,7 @@ Both EC2 instances use AWS Systems Manager Session Manager for shell access. No 
 ├── sg.tf          # Security groups (Minecraft server, bastion)
 ├── ec2.tf         # EC2 instances and AMI data source
 ├── iam.tf         # SSM instance role, policy attachment, instance profile
+├── data.tf        # Data file for AWS resources
 └── var.tf         # All input variables
 ```
 
