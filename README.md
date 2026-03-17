@@ -138,7 +138,7 @@ aws ssm start-session --target <instance-id> --region us-east-1
 
 ## Related Project
 
-**[aws-security-audit-scripts](https://github.com/cybergrizz)** — the Bash-based scanner that audits this infrastructure across IAM, S3, EC2, RDS, ELB, CloudTrail, and GuardDuty. The two repos are designed to work together: this is the target environment, the scanner is the audit engine.
+**[aws-security-audit-scripts](https://github.com/cybergrizz/AWS-Scanner_Proj)** — the Bash-based scanner that audits this infrastructure across IAM, S3, EC2, RDS, ELB, CloudTrail, and GuardDuty. The two repos are designed to work together: this is the target environment, the scanner is the audit engine.
 
 ---
 
