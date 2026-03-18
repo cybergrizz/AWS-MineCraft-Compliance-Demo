@@ -11,7 +11,7 @@
 
 ## Overview
 
-This project provisions a Minecraft game server on AWS and uses it as a live compliance target. The infrastructure is intentionally built to pass the same security checks run by the [aws-security-audit-scripts](https://github.com/cybergrizz) scanner — no open SSH, SSM-only access, KMS-encrypted CloudTrail logs, GuardDuty enabled, and S3 buckets with public access fully blocked.
+This project provisions a Minecraft game server on AWS and uses it as a live compliance target. The infrastructure is intentionally built to pass the same security checks run by the [aws-security-audit-scripts](https://github.com/cybergrizz](https://github.com/cybergrizz/AWS-Scanner_Proj) scanner — no open SSH, SSM-only access, KMS-encrypted CloudTrail logs, GuardDuty enabled, and S3 buckets with public access fully blocked.
 
 The end state ties scanner findings to NIST AI RMF control categories (Govern / Map / Measure / Manage) stored in DynamoDB, making this a working GRC demo rather than a static architecture diagram.
 
@@ -178,7 +178,7 @@ Start-Process -FilePath "$env:TEMP\SessionManagerPluginSetup.exe" -ArgumentList 
 
 ## Scanner Audit Coverage
 
-Checks from [aws-security-audit-scripts](https://github.com/cybergrizz) and their expected result against this infrastructure:
+Checks from [aws-security-audit-scripts](https://github.com/cybergrizz](https://github.com/cybergrizz/AWS-Scanner_Proj) and their expected result against this infrastructure:
 
 | Check | Expected Result |
 |-------|----------------|
@@ -208,7 +208,7 @@ Checks from [aws-security-audit-scripts](https://github.com/cybergrizz) and thei
 
 ## Related Project
 
-**[aws-security-audit-scripts](https://github.com/cybergrizz)** — the Bash-based scanner that audits this infrastructure across IAM, S3, EC2, RDS, ELB, CloudTrail, and GuardDuty. The two repos are designed to work together: this is the target environment, the scanner is the audit engine.
+**[aws-security-audit-scripts]([https://github.com/cybergrizz](https://github.com/cybergrizz/AWS-Scanner_Proj))** — the Bash-based scanner that audits this infrastructure across IAM, S3, EC2, RDS, ELB, CloudTrail, and GuardDuty. The two repos are designed to work together: this is the target environment, the scanner is the audit engine.
 
 ---
 
