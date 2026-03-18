@@ -1,6 +1,6 @@
 resource "aws_security_group" "minecraft_serversg" {
   name   = var.mc_server_sg_name
-  vpc_id = var.vpc_id
+  vpc_id = aws_vpc.main.id
 
 
   ingress {
@@ -32,7 +32,7 @@ resource "aws_security_group" "minecraft_serversg" {
 
 resource "aws_security_group" "bastion" {
   name   = var.bastion_sg_name
-  vpc_id = var.vpc_id
+  vpc_id = aws_vpc.main.id
 
   egress {
     from_port   = var.egress_all
