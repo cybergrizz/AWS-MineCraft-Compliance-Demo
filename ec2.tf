@@ -1,7 +1,7 @@
 resource "aws_instance" "minecrafte_server" {
-  ami                  = var.ami_id
+  ami                  = data.aws_ami.amazon_linux_2.id
   instance_type        = var.instance_type
-  subnet_id            = var.public_subnet
+  subnet_id            = aws_subnet.public.id
   iam_instance_profile = var.instance_profile
 
   tags = {
@@ -12,9 +12,9 @@ resource "aws_instance" "minecrafte_server" {
 }
 
 resource "aws_instance" "bastion" {
-  ami                  = var.ami_id
+  ami                  = data.aws_ami.amazon_linux_2.id
   instance_type        = var.instance_type
-  subnet_id            = var.private_subnet
+  subnet_id            = aws_subnet.private.id
   iam_instance_profile = var.instance_profile
 
   tags = {
