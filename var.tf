@@ -85,3 +85,9 @@ variable "instance_profile" {
   type    = string
   default = "minecraft_ssm_instance_role"
 }
+
+variable "bucket_name" {
+  type        = string
+  default     = "minecraft-nist-cloudtrail-logs"
+  description = "S3 bucket name for CloudTrail logs"
+}
