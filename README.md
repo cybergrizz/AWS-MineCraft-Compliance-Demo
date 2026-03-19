@@ -1,11 +1,11 @@
-# 🧱 minecraft-nist-demo — AWS Infrastructure
+# minecraft-nist-demo — AWS Infrastructure
 
 > Terraform infrastructure for a Minecraft server environment mapped to the NIST AI Risk Management Framework. Built as a live compliance demo that audits its own infrastructure.
 
 **Author:** [Kevin Douglas](https://github.com/cybergrizz) · [kdresume.link](https://kdresume.link) · Vienna, VA  
 **Focus:** Cloud Security · GRC · IaC · NIST AI RMF
 
-> ⚠️ **Status:** In progress — networking, compute, observability, and storage layers deployed. SSM Parameter Store, Lambda scanner, DynamoDB NIST mapping, and EventBridge trigger coming next.
+> **Status:** In progress — networking, compute, observability, and storage layers deployed. SSM Parameter Store, Lambda scanner, DynamoDB NIST mapping, and EventBridge trigger coming next.
 
 ---
 
