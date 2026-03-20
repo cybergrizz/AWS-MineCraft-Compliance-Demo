@@ -1,2 +1,2 @@
-webhook   = "https://hooks.slack.com/services/your/webhook/url"
-scan_role = "arn:aws:iam::103425803255:role/VulnScanReadOnly"
+webhook   = "YOUR WEBHOOK URL"
+scan_role = "arn:aws:iam::YOUR ACCOUNT ID:role/VulnScanReadOnly"
