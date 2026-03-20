@@ -91,3 +91,27 @@ variable "bucket_name" {
   default     = "minecraft-nist-cloudtrail-logs"
   description = "S3 bucket name for CloudTrail logs"
 }
+
+variable "webhook" {
+  type        = string
+  description = "Slack webhook URL for scan notifications"
+  sensitive   = true
+}
+
+variable "scan_role" {
+  type        = string
+  description = "ARN for VulnScanReadOnly role"
+  sensitive   = true
+}
+
+variable "parameter_region" {
+  type        = string
+  default     = "us-east-1"
+  description = "region for parameter store"
+}
+
+variable "table_name" {
+  type        = string
+  default     = "nist-control-map"
+  description = "DynamoDB table name for NIST AI RMF control mappings"
+}
