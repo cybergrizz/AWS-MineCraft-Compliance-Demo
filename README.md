@@ -198,10 +198,10 @@ Checks from [aws-security-audit-scripts](https://github.com/cybergrizz/AWS-Scann
 
 ## What's Coming Next
 
-- SSM Parameter Store (Slack webhook, scan credentials)
+- SSM Parameter Store (Slack webhook, scan credentials) - Done 
 - Lambda function wrapping `scanner.sh`
 - EventBridge scheduled scan trigger
-- DynamoDB table for NIST AI RMF control mappings
+- DynamoDB table for NIST AI RMF control mappings - Done
 - Full NIST AI RMF control coverage map (Govern / Map / Measure / Manage)
 - VPC endpoints for SSM (keep SSM traffic off the public internet)
 
