@@ -115,3 +115,9 @@ variable "table_name" {
   default     = "nist-control-map"
   description = "DynamoDB table name for NIST AI RMF control mappings"
 }
+
+variable "lambda_name" {
+  type        = string
+  default     = "minecraft-nist-scanner-lambda"
+  description = "Name of Lambda execution role and function"
+}
