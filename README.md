@@ -45,19 +45,25 @@ Both EC2 instances use AWS Systems Manager Session Manager for shell access. No 
 
 ```
 .
-├── providers.tf    # AWS provider config and Terraform version constraints
-├── vpc.tf          # VPC, public and private subnets
-├── gateways.tf     # Internet gateway, NAT gateway, Elastic IP
-├── routes.tf       # Route tables and associations (public → IGW, private → NAT)
-├── sg.tf           # Security groups (Minecraft server, bastion)
-├── ec2.tf          # EC2 instances and AMI data source
-├── iam.tf          # SSM instance role, policy attachment, instance profile
-├── cloudtrail.tf   # CloudTrail trail, S3 bucket policy, KMS key and policy
-├── guardduty.tf    # GuardDuty detector and S3 protection feature
-├── s3.tf           # S3 bucket for CloudTrail logs, public access block
-├── outputs.tf      # Instance IDs and NAT gateway IP
-├── data.tf         # Data Resources
-└── var.tf          # All input variables
+├── providers.tf       # AWS provider config and Terraform version constraints
+├── vpc.tf             # VPC, public and private subnets
+├── gateways.tf        # Internet gateway, NAT gateway, Elastic IP
+├── routes.tf          # Route tables and associations (public → IGW, private → NAT)
+├── sg.tf              # Security groups (Minecraft server, bastion)
+├── ec2.tf             # EC2 instances and AMI data source
+├── iam.tf             # SSM instance role, policy attachment, instance profile
+├── cloudtrail.tf      # CloudTrail trail, S3 bucket policy, KMS key and policy
+├── guardduty.tf       # GuardDuty detector and S3 protection feature
+├── s3.tf              # S3 bucket for CloudTrail logs, public access block
+├── outputs.tf         # Instance IDs and NAT gateway IP
+├── data.tf            # Data Resources
+└── dynamodb.tf       # IAM for Lambda Function
+└── parameterstore.tf  # Paramerters for SSM
+├── eventbridge.tf     # File for EVent Briudge for Lambda Function
+├── lambda.tf          # Lambda Function
+└── lambdaiam.tf       # IAM for Lambda Function
+└── terraform.tfvars   # Var file for sensitive data
+└── var.tf             # All input variables
 ```
 
 ---
@@ -199,11 +205,11 @@ Checks from [aws-security-audit-scripts](https://github.com/cybergrizz/AWS-Scann
 ## What's Coming Next
 
 - SSM Parameter Store (Slack webhook, scan credentials) - Done 
-- Lambda function wrapping `scanner.sh`
-- EventBridge scheduled scan trigger
+- Lambda function wrapping `scanner.sh` - Done
+- EventBridge scheduled scan trigger - Done
 - DynamoDB table for NIST AI RMF control mappings - Done
 - Full NIST AI RMF control coverage map (Govern / Map / Measure / Manage)
-- VPC endpoints for SSM (keep SSM traffic off the public internet)
+- VPC endpoints for SSM (keep SSM traffic off the public internet) - Done
 
 ---
 
