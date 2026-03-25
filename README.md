@@ -57,12 +57,12 @@ Both EC2 instances use AWS Systems Manager Session Manager for shell access. No 
 ├── s3.tf              # S3 bucket for CloudTrail logs, public access block
 ├── outputs.tf         # Instance IDs and NAT gateway IP
 ├── data.tf            # Data Resources
-└── dynamodb.tf       # IAM for Lambda Function
-└── parameterstore.tf  # Paramerters for SSM
+├── dynamodb.tf       # IAM for Lambda Function
+├── parameterstore.tf  # Paramerters for SSM
 ├── eventbridge.tf     # File for EVent Briudge for Lambda Function
 ├── lambda.tf          # Lambda Function
-└── lambdaiam.tf       # IAM for Lambda Function
-└── terraform.tfvars   # Var file for sensitive data
+├── lambdaiam.tf       # IAM for Lambda Function
+├── terraform.tfvars   # Var file for sensitive data
 └── var.tf             # All input variables
 ```
 
